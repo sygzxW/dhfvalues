@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <meta name="description" content="Your Website Description">
+    <title>dhfvalues</title>
     <style>
         body {
+            background-image: url('./assets/bg.jpg'); /* Path to your background image */
+            background-size: contain;
+            background-position: center;
             background-color: #f0f0f0; /* Default background color */
+            background-attachment: fixed; /* Fix background position */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -21,37 +24,80 @@
         h1 {
             color: #333; /* Default text color */
         }
-        .black-frame {
+        .black-frame-top,
+        .black-frame-bottom {
             background-color: black;
             color: white;
             font-size: 70px;
             padding: 20px 0;
             margin: 0;
+            height: 70px; /* Fixed height for the black frame */
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             text-align: center;
             z-index: 1000; /* Ensures it's on top of other elements */
         }
+        .black-frame-bottom {
+            bottom: 0;
+        }
+        .centered-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+        }
+        .centered-text {
+            color: white;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+        }
+        .centered-iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .designed-by {
+            position: absolute;
+            bottom: 120px;
+            right: 10px;
+            color: white;
+            font-size: 8px;
+        }
+        .designed-by a {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <div class="black-frame">
-        Black Frame
+    <div class="black-frame-top">
+        <img src="./assets/new.png" alt="Centered Image" class="centered-image">
     </div>
     <div class="container">
-        <h1 id="title">Your Website Title</h1>
-        <p id="description">Your Website Description</p>
+        <h1 id="title">dhfvalues | discord.gg/dhf</h1>
+        <div class="centered-iframe">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-QqYntZKrvSkgUum2NVjYn2uouMBsiW-EIJUhIEfau23N20j9uvboVcVNOW-sj_wimo_chT-yEfoo/pubhtml?widget=true&amp;headers=false" width="600" height="550" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="black-frame-bottom">
+        <div class="centered-text">
+            © 2024 dhfvalues. All rights reserved.
+        </div>
+    </div>
+    <div class="designed-by">
+        Designed by <a href="https://www.freepik.com/">Freepik</a>
     </div>
 
     <script>
         // JavaScript code to customize title, description, and background color
-        document.title = "Your Custom Title";
-        document.getElementById("title").textContent = "Your Custom Title";
-        document.querySelector("meta[name='description']").setAttribute("content", "Your Custom Description");
-        document.getElementById("description").textContent = "Your Custom Description";
-        document.body.style.backgroundColor = "#yourcolor"; // Replace "yourcolor" with your desired color code
+        document.title = "dhfvalues | .gg/defhood";
+        document.body.style.backgroundColor = "#181818"; // Replace "yourcolor" with your desired color code
     </script>
 </body>
 </html>
